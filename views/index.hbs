@@ -1,0 +1,20 @@
+{{!-- <h1>{{title}}</h1> --}}
+<p class="instruction-text">Enter a full URL
+  <span class="example-url">[e.g. https://www.google.com]</span>
+  below to cut it down a notch.</p>
+
+<form action="/submit" method="post" class="container justify-content-center">
+  {{! <label for="url">URL:</label><br /> }}
+  <input
+    type="url"
+    id="url"
+    name="url"
+    placeholder="https://google.com"
+    required
+  />
+  <button id="submit-button" type="submit">Submit</button>
+</form>
+
+{{#if newURL}}
+  <p>Your chppd link is: chppd.xyz/{{newURL}}</p>
+{{/if}}
