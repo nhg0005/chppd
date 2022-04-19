@@ -31,7 +31,6 @@ router.get("/:shortened", function (req, res, next) {
 router.post("/submit", function (req, res, next) {
   // Generate a random string for the link
   let shortURL = generateRandomString(4);
-  // TODO: Validate the url
   // Upload the user's URL and the random string to the DB
   let payload = { actual_url: req.body.url, shortened_url: shortURL };
   Url.create(payload, (err, link) => {
