@@ -29,8 +29,14 @@ router.get("/:shortened", function (req, res, next) {
 
 /* POST URL from form */
 router.post("/submit", function (req, res, next) {
-  // Generate a random string for the link
-  let shortURL = generateRandomString(4);
+  // Check if a custom back-half is present
+  let shortURL;
+  if (req.body.backhalf) {
+    shortURL = req.body.backhalf;
+  } else {
+    // Generate a random string for the backhalf
+    shortURL = generateRandomString(4);
+  }
   // Upload the user's URL and the random string to the DB
   let payload = { actual_url: req.body.url, shortened_url: shortURL };
   Url.create(payload, (err, link) => {

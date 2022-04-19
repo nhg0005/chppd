@@ -6,7 +6,7 @@ A simple URL shortening website built using Express.
 
 ## Features
 
-Put in any URL into the site to get back a randomized short-link.
+Put in any URL into the site to get back a short-link. You can customize the back-half or leave it blank for a random one.
 
 ## Technologies used
 
