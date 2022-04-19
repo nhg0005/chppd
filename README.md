@@ -27,7 +27,7 @@ Put in any URL into the site to get back a randomized short-link.
 ### Clone repository
 
 ```
-git clone [LINK HERE]
+git clone git@github.com:nhg0005/chppd.git
 cd chppd
 ```
 
